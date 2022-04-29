@@ -1,6 +1,6 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
-import react, { useState } from "react";
+import { useState } from "react";
 const DATA_ARR = [
   {
     title: "Car Insurance",

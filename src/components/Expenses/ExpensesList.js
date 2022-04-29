@@ -1,6 +1,5 @@
 import "./Expenses.css";
 import ExpenseItem from "./ExpenseItem";
-import react, { useState } from "react";
 function ExpensesList(props) {
   const expenses = props.items;
 

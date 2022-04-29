@@ -1,7 +1,6 @@
 import "./ExpenseItem.css";
 import DateExpens from "./DateExpens";
 import Card from "../UI/Card";
-import react, { useState } from "react";
 function ExpenseItem(props) {
   //const [title, setTitle] = useState(props.title);
   // const onClickFunct = () => {

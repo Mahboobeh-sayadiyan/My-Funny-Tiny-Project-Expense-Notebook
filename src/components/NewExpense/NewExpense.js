@@ -1,7 +1,7 @@
 import Card from "../UI/Card";
 import ExpenseForm from "./ExpenseForm";
 import "./NewExpense.css";
-import react, { useState } from "react";
+import { useState } from "react";
 const NewExpense = (props) => {
   const [showForm, setShowForm] = useState(false);
   const saveExpenseDataHandler = (expenseData) => {

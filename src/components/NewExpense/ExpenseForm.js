@@ -1,6 +1,5 @@
-import Card from "../UI/Card";
 import "./ExpenseForm.css";
-import react, { useState } from "react";
+import { useState } from "react";
 const ExpenseForm = (props) => {
   // const [title, setTitle] = useState("");
   // const [price, setPrice] = useState("");
@@ -21,7 +20,7 @@ const ExpenseForm = (props) => {
     event.preventDefault();
     userInput = {
       title: stateObj.title,
-      price: stateObj.price,
+      price: +stateObj.price,
       date: new Date(stateObj.date),
     };
     /// pass data up
@@ -40,7 +39,7 @@ const ExpenseForm = (props) => {
     <form onSubmit={submitHandler}>
       <div className="new-expense__controls">
         <div className="new-expense__control">
-          <label for="fname">Title</label>
+          <label htmlFor="fname">Title</label>
           <input
             type="text"
             id="fname"
@@ -50,7 +49,7 @@ const ExpenseForm = (props) => {
           ></input>
         </div>
         <div className="new-expense__control">
-          <label for="lname">Price</label>
+          <label htmlFor="lname">Price</label>
           <input
             type="number"
             id="lname"
@@ -62,7 +61,7 @@ const ExpenseForm = (props) => {
           ></input>
         </div>
         <div className="new-expense__control">
-          <label for="lname">Date</label>
+          <label htmlFor="lname">Date</label>
           <input
             type="date"
             id="lname"
