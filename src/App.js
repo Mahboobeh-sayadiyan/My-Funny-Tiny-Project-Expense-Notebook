@@ -8,7 +8,24 @@ const DATA_ARR = [
     date: new Date(),
     id: "25468484654",
   },
-  { title: "Grocery", price: "2000", date: new Date(), id: "454545452121" },
+  {
+    title: "Grocery",
+    price: "2000",
+    date: new Date("2022-05-01"),
+    id: "454545452121",
+  },
+  {
+    title: "CarWash",
+    price: "20",
+    date: new Date("2019-01-01"),
+    id: "2589345154",
+  },
+  {
+    title: "Restaurant",
+    price: "100",
+    date: new Date("2021-01-01"),
+    id: "45454789347",
+  },
 ];
 const App = () => {
   const [expenses, setExpenses] = useState(DATA_ARR);
