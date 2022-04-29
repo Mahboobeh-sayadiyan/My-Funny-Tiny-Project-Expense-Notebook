@@ -11,19 +11,25 @@ const DATA_ARR = [
   {
     title: "Grocery",
     price: "2000",
-    date: new Date("2022-05-01"),
+    date: new Date(2022, 11, 17),
     id: "454545452121",
   },
   {
     title: "CarWash",
     price: "20",
-    date: new Date("2019-01-01"),
+    date: new Date(2019, 5, 17),
     id: "2589345154",
   },
   {
     title: "Restaurant",
     price: "100",
-    date: new Date("2021-01-01"),
+    date: new Date(2021, 4, 11),
+    id: "45454789347",
+  },
+  {
+    title: "Dentist",
+    price: "3000",
+    date: new Date(2022, 6, 11),
     id: "45454789347",
   },
 ];
