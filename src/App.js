@@ -34,12 +34,13 @@ const DATA_ARR = [
   },
 ];
 const App = () => {
-  const [expenses, setExpenses] = useState(DATA_ARR);
+  const storedData = JSON.parse(localStorage.getItem("Expenses"));
+  const [expenses, setExpenses] = useState(storedData ? storedData : []);
   const showNewExpanseHandler = (newExpenseData) => {
     setExpenses((prevexpenses) => {
-      const newArr = [newExpenseData, ...prevexpenses];
-      console.log(newArr);
-      return newArr;
+      const newExpense = [newExpenseData, ...prevexpenses];
+      localStorage.setItem("Expenses", JSON.stringify(newExpense));
+      return newExpense;
     });
   };
   return (
