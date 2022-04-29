@@ -14,6 +14,9 @@ const NewExpense = (props) => {
   const hideFormHandler = () => {
     setShowForm(false);
   };
+  const removeHandler = () => {
+    props.onRemoveExpense();
+  };
 
   return (
     <Card className="new-expense">
@@ -23,7 +26,10 @@ const NewExpense = (props) => {
           onSaveExpenseData={saveExpenseDataHandler}
         />
       ) : (
-        <button onClick={showFormHandler}>Add New Expense</button>
+        <div>
+          <button onClick={showFormHandler}>Add New Expense</button>
+          <button onClick={removeHandler}>Remove All Expenses</button>
+        </div>
       )}
     </Card>
   );

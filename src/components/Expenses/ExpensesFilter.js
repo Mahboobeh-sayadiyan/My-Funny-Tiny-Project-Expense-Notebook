@@ -8,10 +8,16 @@ const ExpensesFilter = (props) => {
     const filterData = event.target.value;
     props.onSaveFilterData(filterData);
   };
+  const removeExpenseYearHandler = () => {
+    props.onRemoveExpenses();
+  };
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
         <label>Filter by year</label>
+        <button onClick={removeExpenseYearHandler}>
+          Remove This Year's Expenses
+        </button>
         <select value={props.selected} onChange={filterChangeHandler}>
           <option value="2022">2022</option>
           <option value="2021">2021</option>

@@ -43,10 +43,26 @@ const App = () => {
       return newExpense;
     });
   };
+  const removeExpanseHandler = () => {
+    localStorage.removeItem("Expenses");
+    setExpenses([]);
+  };
+  const removeExpanseYearHandler = (year) => {
+    const editedExpenses = expenses.filter(
+      (expense) => expense.date.getFullYear().toString() !== year
+    );
+
+    localStorage.removeItem("Expenses");
+    localStorage.setItem("Expenses", JSON.stringify(editedExpenses));
+    setExpenses(editedExpenses);
+  };
   return (
     <div>
-      <NewExpense onShowNewExpanse={showNewExpanseHandler} />
-      <Expenses items={expenses} />
+      <NewExpense
+        onRemoveExpense={removeExpanseHandler}
+        onShowNewExpanse={showNewExpanseHandler}
+      />
+      <Expenses onRemoveExpense={removeExpanseYearHandler} items={expenses} />
     </div>
   );
 };

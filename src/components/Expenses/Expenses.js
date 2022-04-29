@@ -15,11 +15,16 @@ function Expenses(props) {
     return item.date.getFullYear().toString() === filterData;
   });
 
+  const removeExpenseYearHandler = () => {
+    props.onRemoveExpense(filterData);
+  };
+
   return (
     <Card className="expenses">
       <ExpensesFilter
         selected={filterData}
         onSaveFilterData={saveFilterDataHandler}
+        onRemoveExpenses={removeExpenseYearHandler}
       />
       <ExpensesChart items={filteredExpenses} />
       <ExpensesList items={filteredExpenses} />
