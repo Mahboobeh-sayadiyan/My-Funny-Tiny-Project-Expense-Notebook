@@ -34,7 +34,6 @@ import { useState } from "react";
 //   },
 // ];
 const App = () => {
-  localStorage.removeItem("Expenses");
   let storedData = JSON.parse(localStorage.getItem("Expenses"));
   if (storedData != null) {
     storedData = [
