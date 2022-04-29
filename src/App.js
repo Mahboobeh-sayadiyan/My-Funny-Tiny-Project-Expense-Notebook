@@ -34,7 +34,15 @@ import { useState } from "react";
 //   },
 // ];
 const App = () => {
-  const storedData = JSON.parse(localStorage.getItem("Expenses"));
+  localStorage.removeItem("Expenses");
+  let storedData = JSON.parse(localStorage.getItem("Expenses"));
+  if (storedData != null) {
+    storedData = [
+      ...storedData.map((expense) => {
+        return { ...expense, date: new Date(expense.date) };
+      }),
+    ];
+  }
   const [expenses, setExpenses] = useState(storedData ? storedData : []);
   const showNewExpanseHandler = (newExpenseData) => {
     setExpenses((prevexpenses) => {
