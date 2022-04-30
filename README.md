@@ -8,4 +8,5 @@ https://expense-notebook.netlify.app/
 ## Application functionality
 
 This web application records your expenses.<br>
-You are able to search expenses by year filter in the app.
+You are able to search expenses by year filter in the app.<br>
+After you leave page your data will be saved on your browser local storage and will be accessible in future browser sessions.
